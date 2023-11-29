@@ -1,5 +1,6 @@
 package com.example.assignment_9_1;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -66,14 +67,28 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // Call the mListener for the addLog method
+                mListener.goToAddLog();
             }
         });
 
         binding.buttonViewProgress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Call the mListener for the viewProgress method
+                mListener.viewProgress();
             }
         });
+    }
+
+    MainFragmentListener mListener;
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        mListener = (MainFragmentListener) context;
+    }
+
+    public interface MainFragmentListener {
+        void goToAddLog();
+        void viewProgress();
     }
 }

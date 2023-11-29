@@ -55,7 +55,7 @@ public class LogAdapter extends RecyclerView.Adapter<LogAdapter.LogViewHolder> {
 
             // Handle delete button click
             binding.buttonDelete.setOnClickListener(view -> {
-                // Perform delete operation or show a confirmation dialog
+                // call the listener to delete the item
             });
         }
     }

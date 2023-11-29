@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MainFragment.MainFragmentListener{
     private static final String TAG = "demo";
 
     @Override
@@ -25,6 +25,22 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager()
                 .beginTransaction()
                 .add(R.id.rootView, MainFragment.newInstance(logs))
+                .commit();
+    }
+
+    @Override
+    public void goToAddLog() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.rootView, new AddLogFragment())
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void viewProgress() {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.rootView, new ViewProgressFragment())
+                .addToBackStack(null)
                 .commit();
     }
 }

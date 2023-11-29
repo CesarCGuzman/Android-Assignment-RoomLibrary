@@ -6,7 +6,14 @@
     <string name="hoursLable">Sleep Hours:</string>
     <string name="deleteLabel">Delete</string>
     <string name="ExerciseTimeLable">Minutes Exercised:</string>
-    <string name="weightLabel">Weight:</string>
+    <string name="weightLabel">Weight(lbs):</string>
     <string name="AddLogLabel">Add Log</string>
     <string name="viewProgressLabel">View Progress</string>
+    <string name="buttonLabelDateTime">Select Date/Time</string>
+    <string name="buttonSleepHrsLabel">Select Hours Slept</string>
+    <string name="buttonSlepQualLabel">Select Sleep Quality</string>
+    <string name="SleepQualityLabel">Sleep Quality:</string>
+    <string name="DefaultLabel">N/A</string>
+    <string name="buttonSelectExerTime">Select Exercise Time</string>
+    <string name="ExerciseHrsLabel">Hours Exercised:</string>
 </resources>

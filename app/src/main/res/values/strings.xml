@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Assignment_9-1</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="timeLable">Date/Time:</string>
+    <string name="hoursLable">Sleep Hours:</string>
+    <string name="deleteLabel">Delete</string>
+    <string name="ExerciseTimeLable">Minutes Exercised:</string>
+    <string name="weightLabel">Weight:</string>
+    <string name="AddLogLabel">Add Log</string>
+    <string name="viewProgressLabel">View Progress</string>
+</resources>

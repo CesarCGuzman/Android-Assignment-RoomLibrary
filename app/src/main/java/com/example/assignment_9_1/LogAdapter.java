@@ -56,8 +56,21 @@ public class LogAdapter extends RecyclerView.Adapter<LogAdapter.LogViewHolder> {
             // Handle delete button click
             binding.buttonDelete.setOnClickListener(view -> {
                 // call the listener to delete the item
+                mListener.deleteLog(log);
             });
         }
+    }
+
+    static LogAdapterListener mListener;
+
+    @Override
+    public void onAttachedToRecyclerView(@NonNull RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
+        mListener = (LogAdapterListener) recyclerView.getContext();
+    }
+
+    public interface LogAdapterListener {
+        void deleteLog(Log log);
     }
 }
 

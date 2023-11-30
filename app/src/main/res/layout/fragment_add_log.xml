@@ -16,23 +16,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewDateTime"
+        android:id="@+id/textViewDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="@string/DefaultLabel"
         app:layout_constraintStart_toEndOf="@+id/textViewDateTimeLabel"
         app:layout_constraintTop_toTopOf="@+id/textViewDateTimeLabel" />
-
-    <Button
-        android:id="@+id/buttonSelectDateTime"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/buttonLabelDateTime"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDateTime" />
 
     <Button
         android:id="@+id/buttonSelectHrsSlept"
@@ -51,14 +40,13 @@
         android:layout_marginTop="24dp"
         android:text="@string/hoursLable"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSelectDateTime" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <TextView
         android:id="@+id/textViewSleep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="@string/DefaultLabel"
         app:layout_constraintStart_toEndOf="@+id/textViewSleepHrsLabel"
         app:layout_constraintTop_toTopOf="@+id/textViewSleepHrsLabel" />
 
@@ -86,7 +74,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="@string/DefaultLabel"
         app:layout_constraintStart_toEndOf="@+id/textViewSleepQualLabel"
         app:layout_constraintTop_toTopOf="@+id/textViewSleepQualLabel" />
 
@@ -114,7 +101,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="@string/DefaultLabel"
         app:layout_constraintStart_toEndOf="@+id/textViewExerciseLabel"
         app:layout_constraintTop_toTopOf="@+id/textViewExerciseLabel" />
 
@@ -165,5 +151,40 @@
             android:layout_weight="1"
             android:text="Submit" />
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDate">
+
+        <Button
+            android:id="@+id/buttonSelectDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:text="Select Date" />
+
+        <Button
+            android:id="@+id/buttonSelectTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:text="Select Time" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewDate"
+        app:layout_constraintTop_toTopOf="@+id/textViewDate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 @Entity(tableName = "Logs")
@@ -57,6 +58,12 @@ public class Log implements Serializable {
                 ", exerciseMins='" + exerciseMins + '\'' +
                 ", weight='" + weight + '\'' +
                 '}';
+    }
+
+    public String getDateTimeString() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy HH:mm");
+        String formattedDate = dateFormat.format(dateTime.getTime());
+        return formattedDate;
     }
 
     public long getId() {
